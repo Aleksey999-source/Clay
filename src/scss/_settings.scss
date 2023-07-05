@@ -1,12 +1,12 @@
 
 //Переменные---------------------------------------------------------------------------------------------------------------------------
-$maxWidth: 1440px;
+$maxWidth: 1280px;
 $minWidth: 320px;
-$maxWidthContainer: 1200px;
+$maxWidthContainer: 1170px;
 $md1: 1200px;
 $md3: 768px;
 $md4: 375px;
-$bgc: #ECF3FB; // Основной цвет фона
+$bgc: #fff; // Основной цвет фона
 $ebgc: #1749B3; // Дополнительный цвет фона
 $c: #FFFFFF; // Основной цвет
 $bc: #FFFFFF; // цвет текста кнопки
@@ -33,7 +33,6 @@ $abc: #4B84FD; // цвет кнопки в активном состоянии
 //Миксины-----------------------------------------------------------------------------------------------------------------------------
 //Кнопки------------------------------------------------------------------------------------------------------------------------------
 @mixin tplbutton1 (){
-   font-family: 'Gotham Pro';
    font-style: normal;
    font-weight: 700;
    font-size: 17px;
@@ -59,7 +58,6 @@ $abc: #4B84FD; // цвет кнопки в активном состоянии
 }
 
 @mixin tplbutton2 (){
-   font-family: 'Gotham Pro';
    font-style: normal;
    font-weight: 700;
    font-size: 17px;
@@ -85,9 +83,9 @@ $abc: #4B84FD; // цвет кнопки в активном состоянии
 }
 
 //Формы ----
-.password--input{
+// .password--input{
    
-}
+// }
 
 
 //Оболочка-----------------------------------------------------------------------------------------------------------------------------
@@ -116,22 +114,23 @@ $abc: #4B84FD; // цвет кнопки в активном состоянии
    }
 }
 //Шрифт по умолчанию--------------------------------------------------------------------------------------------------------------------
-$fontFamily: 'Gotham Pro';
+$fontFamily: 'Roboto';
 body{
    font-family: $fontFamily;
    background-color: $bgc;
 }
 //-------Заголовки----------------------------------------------------------------------------------------------------------------------
 h1{
-   font-family: 'Manrope', sans-serif;
+   color: #000;
+   font-size: 64px;
+   font-family: Prata;
    font-style: normal;
-   font-weight: 600;
-   font-size: 16px;
-   line-height: 130%;
-   color: #171717;
+   font-weight: 400;
+   line-height: 68px;
+   letter-spacing: 1.28px;
 }
 h2{
-   font-family: 'Gotham Pro';
+   font-family: Prata;
    font-weight: 700;
    font-size: 25px;
    line-height: 140%;
@@ -140,11 +139,13 @@ h2{
 }
 //----Текст-----------------------------------------------------------------------------------------------------------------------------
 ._description{
-   font-family: $fontFamily;
+   color: #000;
+   font-size: 20px;
+   font-family: Roboto;
+   font-style: normal;
    font-weight: 400;
-   font-size: 16px;
-   line-height: 150%;
-   color: rgba($color: #ffffff, $alpha: .6);
+   line-height: 24px;
+   letter-spacing: -0.3px;
    @media (max-width: $md4){
       font-size: 18px;
    }
