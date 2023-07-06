@@ -20,4 +20,11 @@ let isMobile =
 let body = document.querySelector('body');
 
 isMobile.any() ? body.classList.add('touch') : body.classList.add('mouse');
-//
+//----------------------------------Бургер меню----------------------------------------//
+const burger = document.querySelector('.burger');
+burger.addEventListener('click', function(){
+   burger.classList.toggle('burger_active');
+});
+
+
+

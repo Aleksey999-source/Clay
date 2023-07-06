@@ -22,31 +22,111 @@ header{
             display:flex;
             justify-content: center;
             align-items: center;
+            flex-wrap: wrap;
             width: 100%;
             height: 117px;
-            li{
+            .menu__item{
                
-               a{
+               .menu__link{
                color: #FFF;
                }
                font-family: Didot, sans-serif;
                font-size: 24px;
                font-weight: 400;
-               &:not(:last-child){
-                  margin: 0px 68px 0px 0px;
-               }
+               margin: 0px 60px 0px 60px;
             }
          }
          .header__basket{
             margin: 0px 0px 0px 50px;
-            ._icon-basket:hover{
-               :hover{
-                  color: #757575;
-                  font-size: 100px;
-                  transition: all .3s ease;
-                }
+            i{
+               font-size: 40px;
+               color:white
             }
          }
       }
    }
+}
+body.mouse{
+   .menu__link{
+      &:hover{
+         opacity: .6;
+         transition: all .3s ease;
+      }
+   }
+   .header__basket{
+      i{
+         cursor: pointer;
+         &:hover{
+            opacity: .6;
+            transition: all .3s ease;
+         }
+      }
+   }
+}
+
+.burger{
+   position: relative;
+   width: 35px;
+   height: 25px;
+   cursor: pointer;
+   .burger-line{
+      position: absolute;
+      left: 0;
+      height: 3px; width: 100%;
+      transition: all .3s linear;
+      border-radius: 2px;
+   }
+   .burger-line__first{
+      top: 0;
+   }
+   .burger-line__second, .burger-line__third{
+      top: 50%;
+      transform: translateY(-50%);
+   }
+
+   .burger-line__fourth{
+      top: 100%;
+   }
+
+}
+.burger_active{
+   .burger-line__first{
+      opacity: 0;
+   }
+   .burger-line__second{
+      transform: translateY(-50%) rotate(45deg);
+   }
+   .burger-line__third{
+      transform: translateY(-50%) rotate(-45deg);
+   }
+   .burger-line__fourth{
+      opacity: 0;
+   }
+}
+
+.burgerB{
+   position: relative;
+   width: 35px;
+   height: 25px;
+   cursor: pointer;
+   .burger-line{
+      position: absolute;
+      left: 0;
+      height: 3px; width: 100%;
+      background-color: #000;
+      transition: all .3s linear;
+      border-radius: 2px;
+   }
+   .burger-line__first{
+      top: 0;
+   }
+   .burger-line__second, .burger-line__third{
+      top: 50%;
+      transform: translateY(-50%);
+   }
+
+   .burger-line__fourth{
+      top: 100%;
+   }
+
 }

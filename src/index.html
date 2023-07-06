@@ -4,8 +4,13 @@
     'title': 'Главная'
   })
   <body>
+    
     <div class="wrapper">
-      @@include('html/header.html', {})
+      @@include('html/header.html', {
+        'Logo': '<img src="images/Логотип_Clay-01 1.svg" alt="Логотип Clay">',
+        'Цвет бургер-меню': 'style="background-color: #fff"'
+      })
+      
       <main class="page">
         <section class="promo__section">
           <div class="promo__container _container">
