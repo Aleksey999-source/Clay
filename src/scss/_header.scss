@@ -10,8 +10,11 @@ header{
       justify-content: space-between;
       align-items: center;
       height: 117px;
-      .header__logo{
-
+      @media (max-width:$md4){
+         .header__logo img{
+         width: 90px;
+         height: 100%;
+         }
       }
       .header__menu{
          display:flex;
@@ -45,6 +48,34 @@ header{
          }
       }
    }
+   .burger-menu{
+      position: fixed;
+      top: 0;
+      left: -100%;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgb(37, 37, 37);
+      transition: all .4s ease;
+      .menu-burger{
+         width: 100%;
+         height: 100%;
+         display:flex;
+         justify-content: center;
+         align-items: center;
+         flex-direction: column;
+         
+         .burger-item{
+            margin: 0px 0px 30px 0px;
+            a{
+               font-size: 30px;
+            }
+         }
+      }
+   }
+   ._active{
+      left: 0;
+      opacity: .95;
+   }
 }
 body.mouse{
    .menu__link{
@@ -65,10 +96,12 @@ body.mouse{
 }
 
 .burger{
+   display: none;
    position: relative;
    width: 35px;
-   height: 25px;
+   height: 24px;
    cursor: pointer;
+   z-index: 100;
    .burger-line{
       position: absolute;
       left: 0;
@@ -81,52 +114,35 @@ body.mouse{
    }
    .burger-line__second, .burger-line__third{
       top: 50%;
-      transform: translateY(-50%);
    }
-
    .burger-line__fourth{
       top: 100%;
    }
-
 }
 .burger_active{
    .burger-line__first{
       opacity: 0;
    }
    .burger-line__second{
-      transform: translateY(-50%) rotate(45deg);
+      transform: rotate(45deg);
    }
    .burger-line__third{
-      transform: translateY(-50%) rotate(-45deg);
+      transform: rotate(-45deg);
    }
    .burger-line__fourth{
       opacity: 0;
    }
 }
 
-.burgerB{
-   position: relative;
-   width: 35px;
-   height: 25px;
-   cursor: pointer;
-   .burger-line{
-      position: absolute;
-      left: 0;
-      height: 3px; width: 100%;
-      background-color: #000;
-      transition: all .3s linear;
-      border-radius: 2px;
+@media (max-width:$md2){
+   .burger{
+      display: block;
    }
-   .burger-line__first{
-      top: 0;
-   }
-   .burger-line__second, .burger-line__third{
-      top: 50%;
-      transform: translateY(-50%);
+   .menu__list li{
+      display: none;
    }
 
-   .burger-line__fourth{
-      top: 100%;
+   .header__basket{
+      display: none;
    }
-
 }

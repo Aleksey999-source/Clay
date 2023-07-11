@@ -22,8 +22,18 @@ let body = document.querySelector('body');
 isMobile.any() ? body.classList.add('touch') : body.classList.add('mouse');
 //----------------------------------Бургер меню----------------------------------------//
 const burger = document.querySelector('.burger');
+const burgerMenu = document.querySelector('.burger-menu');
 burger.addEventListener('click', function(){
    burger.classList.toggle('burger_active');
+   burgerMenu.classList.toggle('_active');
+      if (burgerMenu.classList.contains("_active"))
+   {
+      document.body.style.overflow = 'hidden';
+   }
+   else
+   {
+      document.body.style.overflow = "scroll";
+   }
 });
 
 
