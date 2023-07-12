@@ -1,4 +1,9 @@
 
+body.mouse{
+   .promo__section{
+      background-attachment: fixed;
+   }
+}
 .promo__section{
    width: 100%;
    min-height: 847px;
@@ -85,3 +90,65 @@
          }
       }
    }
+//------------------------------------------------------------------О бренде-------------------------------------------------------------------//
+.about-us__section{
+   padding: 100px 0px 200px 0px;
+   .about-us__container{
+      .about-us__body{
+         h2{
+            margin: 0px 0px 70px 0px;
+            @media (max-width: $md3) {
+               margin: 0px 0px 40px 0px;
+            }
+         }
+         .description{
+            display:flex;
+            justify-content: left;
+            align-items: center;
+            margin: 0px 0px 80px 0px;
+            flex-wrap: wrap;
+            @media (max-width:$md3) {
+               margin: 0px 0px 40px 0px;
+            }
+            .description1{
+               margin: 0px 100px 0px 0px;
+               max-width: 400px;
+               text-align:left;
+               min-height: 240px;
+               @media (max-width:$md3) {
+                  margin: 0px 0px 30px 0px;
+                  font-weight: bold
+               }
+            }
+            .description2{
+               max-width: 400px;
+               text-align: left;
+               min-height: 240px;
+            }
+
+         }
+         .about-us__images{
+            display:flex;
+            justify-content: right;
+            align-items: center;
+            flex-wrap: wrap;
+            .image1{
+               margin: 0px 20px 0px 0px;
+               width: 370px;
+               height: 100%;
+               border-radius: 20px;
+               overflow: hidden;
+               @media (max-width:$md2) {   
+                  margin: 0px 0px 20px 0px;
+               }
+            }
+            .image2{
+               max-width: 470px;
+               height: 100%;
+               border-radius: 20px;
+               overflow: hidden;
+            }
+         }
+      }
+   }
+}

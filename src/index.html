@@ -7,10 +7,9 @@
     
     <div class="wrapper">
       @@include('html/header.html', {
-        'Logo': '<img src="images/Логотип_Clay-01 1.svg" alt="Логотип Clay">',
+        'Logo': '<img src="images/Логотип_Clay-01 1.svg" alt="Логотип Clay" id="logoimage1">',
         'Цвет бургер-меню': 'style="background-color: #fff"'
-      })
-      
+      })   
       <main class="page">
         <section class="promo__section">
           <div class="promo__container _container">
@@ -31,7 +30,38 @@
           </div>
         </section>
         <section class="about-us__section">
-          <div class="about-us__container _container"></div>
+          <div class="about-us__container _container">
+            <div class="about-us__body">
+              <h2>О бренде</h2>
+              <div class="about-us__description description">
+                <div class="description1 _description">Clay - достаточно молодой отечественный бренд, производящий керамическую посуду ручной работы. Все изделия изготавливаются только из натуральных материалов, без применения химических добавок и красителей. Посуда ручной работы от марки Clay отличается высоким качеством, прочностью и оригинальным дизайном.</div>
+                <div class="description2 _description">Керамическая посуда Clay пользуется большой популярностью среди покупателей. Её используют в повседневной жизни, для сервировки стола и приготовления пищи. Изделия сделаны из экологически чистого материала, который не вступает в реакцию с пищей, не выделяет вредных веществ при нагреве, не впитывает запахи.</div>
+              </div>
+              <div class="about-us__images images">
+                <div class="image1 image">
+                  <picture>
+                    <source type="image/avif" srcset="images/toa-heftiba-EADOfCK74g0-unsplash1@1x.avif 1x, images/toa-heftiba-EADOfCK74g0-unsplash1@2x.avif 2x, images/toa-heftiba-EADOfCK74g0-unsplash1@3x.avif 3x">
+                    <source type="image/webp" srcset="images/toa-heftiba-EADOfCK74g0-unsplash1@1x.webp 1x, images/toa-heftiba-EADOfCK74g0-unsplash1@2x.webp 2x, images/toa-heftiba-EADOfCK74g0-unsplash1@3x.webp 3x">
+                    <img class="" width="370" height="318"
+                      src="images/toa-heftiba-EADOfCK74g0-unsplash1@1x.jpg"
+                      srcset="images/toa-heftiba-EADOfCK74g0-unsplash1@2x.jpg 2x, images/toa-heftiba-EADOfCK74g0-unsplash1@3x.jpg 3x"
+                      alt="пример продукции Clay">
+                  </picture>
+                </div>
+                
+                <div class="image2 image">
+                  <picture>
+                    <source type="image/avif" srcset="images/toa-heftiba-9xslVfd093c-unsplash1@1x.avif 1x, images/toa-heftiba-9xslVfd093c-unsplash1@2x.avif 2x, images/toa-heftiba-9xslVfd093c-unsplash1@3x.avif 3x">
+                    <source type="image/webp" srcset="images/toa-heftiba-9xslVfd093c-unsplash1@1x.webp 1x, images/toa-heftiba-9xslVfd093c-unsplash1@2x.webp 2x, images/toa-heftiba-9xslVfd093c-unsplash1@3x.webp 3x">
+                    <img class="" width="470" height="318"
+                      src="images/toa-heftiba-9xslVfd093c-unsplash1@1x.jpg"
+                      srcset="images/toa-heftiba-9xslVfd093c-unsplash1@2x.jpg 2x, images/toa-heftiba-9xslVfd093c-unsplash1@3x.jpg 3x"
+                      alt="пример продукции Clay">
+                  </picture>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
         @@include('collection.html', {})
 

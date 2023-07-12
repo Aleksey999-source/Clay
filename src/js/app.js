@@ -20,6 +20,28 @@ let isMobile =
 let body = document.querySelector('body');
 
 isMobile.any() ? body.classList.add('touch') : body.classList.add('mouse');
+//-----------------------------------Смена цвета шапки----------------------------------//
+const header = document.querySelector('.header');
+const AboutUs = document.querySelector('.about-us__section');
+let BurgArr;
+console.log(header.getBoundingClientRect().bottom);
+window.addEventListener('scroll', function(){
+   if (header.getBoundingClientRect().top > AboutUs.getBoundingClientRect().top)
+   {
+      document.getElementById('logoimage1').src = "images/Логотип_Clay-01B.svg";
+      BurgArr = document.querySelectorAll('.burger-line');
+      for (let i = 0; i < BurgArr.length; i++){
+         BurgArr[i].style = "background-color: #000"
+      }
+   }
+   else{
+      BurgArr = document.querySelectorAll('.burger-line');
+      for (let i = 0; i < BurgArr.length; i++){
+         BurgArr[i].style = "background-color: #fff"
+      }
+      document.getElementById('logoimage1').src = "images/Логотип_Clay-01 1.svg";
+   }
+})
 //----------------------------------Бургер меню----------------------------------------//
 const burger = document.querySelector('.burger');
 const burgerMenu = document.querySelector('.burger-menu');
