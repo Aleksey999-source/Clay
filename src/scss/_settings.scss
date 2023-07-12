@@ -123,13 +123,17 @@ body{
 }
 //-------Заголовки----------------------------------------------------------------------------------------------------------------------
 h1{
-   color: #000;
+   color: #fff;
    font-size: 64px;
    font-family: Prata;
    font-style: normal;
    font-weight: 400;
-   line-height: 68px;
+   line-height: calc(68px / 64px) * 100%;
    letter-spacing: 1.28px;
+   @media (max-width:$md3) {
+      font-size: 30px;
+      letter-spacing: .6;
+   }
 }
 h2{
    font-family: Prata;

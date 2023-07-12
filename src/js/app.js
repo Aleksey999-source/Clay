@@ -35,6 +35,17 @@ burger.addEventListener('click', function(){
       document.body.style.overflow = "scroll";
    }
 });
-
-
+//----------------------------------------Анимация стрелки--------------------------
+const _promoLink = document.querySelector('.promo__link');
+const _linkanim = document.querySelector('.link__icon2');
+_promoLink.addEventListener('mouseover', 
+   function() {
+      _linkanim.classList.add('link_active');
+   }
+);
+_promoLink.addEventListener('mouseout',
+   function() {
+      _linkanim.classList.remove('link_active');
+   }
+);
 

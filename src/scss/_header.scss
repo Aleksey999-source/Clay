@@ -55,7 +55,8 @@ header{
       width: 100vw;
       height: 100vh;
       background-color: rgb(37, 37, 37);
-      transition: all .4s ease;
+      transition: all .4s ease; 
+      opacity: .95;
       .menu-burger{
          width: 100%;
          height: 100%;
@@ -74,7 +75,6 @@ header{
    }
    ._active{
       left: 0;
-      opacity: .95;
    }
 }
 body.mouse{

@@ -5,7 +5,83 @@
    background-image: url(../images/main-background.png);
    background-repeat: no-repeat;
    background-size: cover;
-   .promo__container{
-      
+   @media (max-width:$md3){
+      background-position: 30% 60%;
    }
-}
+   @media (min-width:$md1){
+      background-position: 30% 60%;
+   }
+   .promo__body{
+      max-width: 734px;
+      padding: 700px 0px 100px 0px;
+      .promo__header{
+         position: relative;
+         .link{
+            cursor: pointer;
+            position: absolute;
+            top:-100px;
+            left: 0;
+            .link__name{
+               color: #FFF;
+               font-family: Didot, sans-serif;
+               font-size: 26px;
+               font-style: normal;
+               font-weight: 400;
+               line-height: normal;
+               margin: 0px 0px 10px 0px;
+               transition: all .3s ease;
+               @media (min-width:$md2) {
+                  &:hover{
+                     opacity: .6;
+                  }
+               }
+            }
+            .link__icon{
+               width: 268px;
+               position: relative;
+               height: 2px;
+               background-color: #FFF;
+               
+               .link__icon2{
+                  position: relative;
+                  top: 0;
+                  left: 0;
+                  width: 268px;
+                  height: 2px;
+                  background-color: #FFF;
+                  transition: all .5s ease-in-out;
+               }
+               @media (min-width:$md2) {
+                     .link_active{
+                        left: 30%;
+                     }
+                  }
+                     .link__icon2::after{
+                        position: absolute;
+                        transform: rotate(-45deg);
+                        top: 3px;
+                        left: 260px;
+                        content: "";
+                        display: block;
+                        height: 2px;
+                        background-color: #FFF;
+                        width: 10px;
+                        border-radius: 2px;
+                     }
+                     .link__icon2::before{
+                        position: absolute;
+                        transform: rotate(45deg);
+                        top: -3px;
+                        left: 260px;
+                        content: "";
+                        display: block;
+                        height: 2px;
+                        width: 10px;
+                        background-color: #FFF;
+                        border-radius: 2px;
+                     }
+               }
+            }
+         }
+      }
+   }
