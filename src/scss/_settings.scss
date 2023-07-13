@@ -144,13 +144,22 @@ h2{
       font-size: 28px;
    }
 }
+h3{
+   color: #000;
+   font-family: Roboto;
+   font-size: 40px;
+   font-weight: 400;
+   @media (max-width:$md4) {
+      font-size: 28px;
+   }
+}
 //----Текст-----------------------------------------------------------------------------------------------------------------------------
 ._description{
    color: #000;
    font-family: Roboto;
    font-size: 20px;
    font-weight: 400;
-   line-height: calc(24px / 20px) * 100%;
+   line-height: 120%;
    @media (max-width: $md4){
       font-size: 18px;
    }

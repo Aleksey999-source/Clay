@@ -132,6 +132,7 @@ body.mouse{
             justify-content: right;
             align-items: center;
             flex-wrap: wrap;
+            transition: .3s all ease;
             .image1{
                margin: 0px 20px 0px 0px;
                width: 370px;
@@ -147,6 +148,148 @@ body.mouse{
                height: 100%;
                border-radius: 20px;
                overflow: hidden;
+            }
+         }
+      }
+   }
+}
+body.mouse{
+   .image img{
+      transform: scale(1);
+      transition: all .3s ease;
+   }
+   .image img:hover{
+      transform: scale(1.1);
+      transition: all .3s ease;
+   }
+}
+//---------------------------------------Collection section------------------------------------------//
+.collection__section{
+   .collection__container{
+      h2{
+         margin: 0px 0px 80px 0px;
+      }
+      .colletion__description{
+         margin: 0px 0px 80px 0px;
+         max-width: 400px;
+      }
+      .collection__body{
+         .collection__accordion{
+            hr{
+               height: 2px;
+               color:#D0D0D0;
+            }
+            .accordion-item{
+               display:flex;
+               justify-content: flex-start;
+               min-height: 300px;
+               
+               .accordion-item__image{
+                  width: 500px;
+                  height: 100%;
+                  overflow: hidden;
+                  border-radius: 20px;
+                  margin: 0px 20px 0px 0px;
+                  picture{
+                     img{ 
+                        width: 100%;
+                        min-height: 300px;
+                        object-fit:cover;
+                        object-position: 50% 60%;
+                     }
+                  }
+               }
+               .accordion-item__body{
+                  display:flex;
+                  justify-content: start;
+                  flex-direction: column;
+                  align-items: flex-start;
+                  h3{
+                     margin: 0px 0px 50px 0px;
+                  }
+                  width: 500px;
+                  height: 100%;
+                  .accrodion-item__content{
+                     max-width: 500px;
+                     height: 60px;
+                     overflow: hidden;
+                  }
+                  .accordion-item__link::after{
+                     content: "";
+                     position: absolute;
+                     top: -10px;
+                     left: -10px;
+                     width: 300px;
+                     height: 100px;
+                  }
+                  .accordion-item__link{
+                     position: relative;
+                     cursor: pointer;
+                     @media (min-width:$md1) {
+                        .label_active{
+                           opacity: .6;
+                        }
+                     }
+                     margin: 50px 0px 0px 0px;
+                     .link__label{
+                        color: #000;
+                        font-family: Didot;
+                        font-size: 26px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+                        margin: 0px 0px 15px 0px;
+                        transition: all .4s ease; 
+                     }
+                     .link{
+                        width: 270px;
+                        height: 2px;
+                        background-color: black;
+                        @media (min-width:$md1) {
+                           .link_activ{
+                              left: 30%;
+                           }
+                        }
+                     }
+                     .link1{
+                        position: relative;
+                     }
+                     .link2{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        background-color: black;
+                        width: 270px;
+                        height: 2px;
+                        transition: all .3s ease-in;
+                     }
+
+                     .link2::after{
+                        position: absolute;
+                        transform: rotate(-45deg);
+                        top: 3px;
+                        left: 261px;
+                        content: "";
+                        display: block;
+                        height: 2px;
+                        background-color: #000;
+                        width: 10px;
+                        border-radius: 2px;
+                     }   
+                     .link2::before{
+                        position: absolute;
+                        transform: rotate(45deg);
+                        top: -3px;
+                        left: 261px;
+                        content: "";
+                        display: block;
+                        height: 2px;
+                        background-color: #000;
+                        width: 10px;
+                        border-radius: 2px;
+                     }   
+                  }
+               }
             }
          }
       }

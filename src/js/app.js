@@ -58,6 +58,13 @@ burger.addEventListener('click', function(){
    }
 });
 //----------------------------------------Анимация стрелки--------------------------
+const aLink = document.querySelectorAll('.accordion-item__link')
+const _aLinkanim = document.querySelectorAll('.link2')
+const _aLinkLabel = document.querySelectorAll('.link__label')
+
+
+
+
 const _promoLink = document.querySelector('.promo__link');
 const _linkanim = document.querySelector('.link__icon2');
 _promoLink.addEventListener('mouseover', 
@@ -70,4 +77,3 @@ _promoLink.addEventListener('mouseout',
       _linkanim.classList.remove('link_active');
    }
 );
-

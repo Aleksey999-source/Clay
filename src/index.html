@@ -4,7 +4,6 @@
     'title': 'Главная'
   })
   <body>
-    
     <div class="wrapper">
       @@include('html/header.html', {
         'Logo': '<img src="images/Логотип_Clay-01 1.svg" alt="Логотип Clay" id="logoimage1">',
@@ -63,7 +62,9 @@
             </div>
           </div>
         </section>
-        @@include('collection.html', {})
+        @@include('collection.html', {
+          'CollectionDescription' : '<div class="colletion__description _description">Коллекции посуды Clay представлены различной продукцией, которая чётко разграничена по стилям. Среди наших коллекций вы точно сможете найти новых друзей для застолья.</div>'
+        })
 
       </main>
       @@include('html/footer.html', {})
