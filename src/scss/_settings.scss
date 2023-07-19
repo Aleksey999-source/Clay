@@ -111,7 +111,7 @@ $abc: #4B84FD; // цвет кнопки в активном состоянии
    }
    @media (max-width: $md4)
    {   
-      padding: 0 32px 0 32px;
+      padding: 0 16px 0 16px;
    }
    padding: 0px 10px 0px 10px;
 }
@@ -149,7 +149,7 @@ h3{
    font-family: Roboto;
    font-size: 40px;
    font-weight: 400;
-   @media (max-width:$md4) {
+   @media (max-width:$md3) {
       font-size: 28px;
    }
 }

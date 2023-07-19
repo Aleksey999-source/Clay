@@ -59,8 +59,24 @@ burger.addEventListener('click', function(){
 });
 //----------------------------------------Анимация стрелки--------------------------
 const aLink = document.querySelectorAll('.accordion-item__link')
-const _aLinkanim = document.querySelectorAll('.link2')
-const _aLinkLabel = document.querySelectorAll('.link__label')
+// const _aLinkanim = document.querySelectorAll('.link2')
+// const _aLinkLabel = document.querySelectorAll('.link__label')
+
+for (let elem of aLink)
+{
+   elem.addEventListener('mouseover', addClass);
+   elem.addEventListener('mouseout', removeClass);
+}
+
+
+function addClass(){
+   this.querySelector('.link__label').classList.add('label_active');
+   this.querySelector('.link2').classList.add('link_activ');
+}
+function removeClass(){
+   this.querySelector('.link__label').classList.remove('label_active');
+   this.querySelector('.link2').classList.remove('link_activ');
+}
 
 
 
@@ -77,3 +93,32 @@ _promoLink.addEventListener('mouseout',
       _linkanim.classList.remove('link_active');
    }
 );
+// =========================================Collection section=========================== //
+// const _plusIconsArr = document.querySelectorAll('.')
+document.querySelectorAll('.accordion-item__trigger').forEach((item) =>
+   item.addEventListener('click', _toggleClass)
+) 
+function _toggleClass()
+{
+   if (this.querySelector('.trigger_line2').classList.contains('trigger_active'))
+   {
+      this.parentNode.querySelector('.accrodion-item__content').style = "overflow:hidden; height: 0";
+      this.parentNode.querySelector('.accordion-item__image').style = "height: 250px "; 
+      this.querySelector('.trigger_line2').classList.remove('trigger_active');
+   }
+   else
+   {
+      document.querySelectorAll('.trigger_line2').forEach((item) =>
+         item.classList.remove('trigger_active')
+      )
+      document.querySelectorAll('.accrodion-item__content').forEach((item) =>
+         item.style = "overflow:hidden; height: 0px"
+      ) 
+      document.querySelectorAll('.accordion-item__image').forEach((item) =>
+         item.style = "height: 250px "
+      ) 
+      this.parentNode.querySelector('.accrodion-item__content').style = "overflow:visible; height: 250px"; 
+      this.parentNode.querySelector('.accordion-item__image').style = "height: 400px "; 
+      this.querySelector('.trigger_line2').classList.add('trigger_active');
+   }
+}
