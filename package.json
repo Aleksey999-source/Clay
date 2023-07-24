@@ -11,6 +11,11 @@
     "deploy": "gulp deployFTP --build",
     "svgSprive": "gulp svgSprive"
   },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Aleksey999-source/gulp-2022.git"
@@ -30,12 +35,15 @@
   },
   "homepage": "https://github.com/Aleksey999-source/gulp-2022#readme",
   "devDependencies": {
+    "@babel/core": "^7.22.9",
+    "@babel/preset-env": "^7.22.9",
     "browser-sync": "^2.27.7",
     "del": "^6.0.0",
     "fs": "^0.0.1-security",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
     "gulp-avif": "^1.1.1",
+    "gulp-babel": "^8.0.0",
     "gulp-clean-css": "^4.3.0",
     "gulp-file-include": "^2.3.0",
     "gulp-fonter": "^0.3.0",
@@ -51,12 +59,14 @@
     "gulp-sass": "^5.0.0",
     "gulp-svg-sprite": "^1.5.0",
     "gulp-ttf2woff2": "^4.0.1",
+    "gulp-uglify": "^3.0.2",
     "gulp-util": "^3.0.8",
     "gulp-version-number": "^0.2.4",
     "gulp-webp": "^4.0.1",
     "gulp-webp-html-nosvg": "^1.0.1",
     "gulp-webpcss": "^1.1.1",
     "gulp-zip": "^5.1.0",
+    "jquery": "^3.7.0",
     "sass": "^1.45.1",
     "swiper": "^7.3.4",
     "vinyl-ftp": "^0.6.1",
@@ -65,6 +75,8 @@
     "webpack-stream": "^7.0.0"
   },
   "dependencies": {
+    "jquery": "^3.7.0",
+    "popper.js": "^1.16.1",
     "reset-css": "^5.0.1",
     "zip": "^1.2.0"
   }

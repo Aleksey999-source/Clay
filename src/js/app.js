@@ -1,10 +1,4 @@
-import * as flsFunctions from './modules/functions.js'
 
-flsFunctions.isWebp()
-
-import Swiper, { Navigation, Pagination } from 'swiper'
-
-const swiper = new Swiper()
 
 // Проверка на тачскрин --------------------------------------------------
 let isMobile = 
@@ -24,7 +18,6 @@ isMobile.any() ? body.classList.add('touch') : body.classList.add('mouse');
 const header = document.querySelector('.header');
 const AboutUs = document.querySelector('.about-us__section');
 let BurgArr;
-console.log(header.getBoundingClientRect().bottom);
 window.addEventListener('scroll', function(){
    if (header.getBoundingClientRect().top > AboutUs.getBoundingClientRect().top)
    {
@@ -59,8 +52,6 @@ burger.addEventListener('click', function(){
 });
 //----------------------------------------Анимация стрелки--------------------------
 const aLink = document.querySelectorAll('.accordion-item__link')
-// const _aLinkanim = document.querySelectorAll('.link2')
-// const _aLinkLabel = document.querySelectorAll('.link__label')
 
 for (let elem of aLink)
 {
@@ -94,7 +85,6 @@ _promoLink.addEventListener('mouseout',
    }
 );
 // =========================================Collection section=========================== //
-// const _plusIconsArr = document.querySelectorAll('.')
 document.querySelectorAll('.accordion-item__trigger').forEach((item) =>
    item.addEventListener('click', _toggleClass)
 ) 
@@ -122,3 +112,4 @@ function _toggleClass()
       this.querySelector('.trigger_line2').classList.add('trigger_active');
    }
 }
+// ================================================SLICK SLIDER============================================ //
