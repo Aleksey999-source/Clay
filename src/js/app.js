@@ -85,6 +85,7 @@ _promoLink.addEventListener('mouseout',
    }
 );
 // =========================================Collection section=========================== //
+const mediaQuery480px = window.matchMedia('(max-width: 480px)')
 document.querySelectorAll('.accordion-item__trigger').forEach((item) =>
    item.addEventListener('click', _toggleClass)
 ) 
@@ -93,7 +94,14 @@ function _toggleClass()
    if (this.querySelector('.trigger_line2').classList.contains('trigger_active'))
    {
       this.parentNode.querySelector('.accrodion-item__content').style = "overflow:hidden; height: 0";
-      this.parentNode.querySelector('.accordion-item__image').style = "height: 250px "; 
+      if (mediaQuery480px.matches)
+      {
+         this.parentNode.querySelector('.accordion-item__image').style = "height: 160px !important"; 
+      }
+      else
+      {
+         this.parentNode.querySelector('.accordion-item__image').style = "height: 250px !important"; 
+      }
       this.querySelector('.trigger_line2').classList.remove('trigger_active');
    }
    else
@@ -104,11 +112,20 @@ function _toggleClass()
       document.querySelectorAll('.accrodion-item__content').forEach((item) =>
          item.style = "overflow:hidden; height: 0px"
       ) 
-      document.querySelectorAll('.accordion-item__image').forEach((item) =>
-         item.style = "height: 250px "
-      ) 
+      if (mediaQuery480px.matches)
+      {
+         document.querySelectorAll('.accordion-item__image').forEach((item) =>
+            item.style = "height: 160px !important"
+         )     
+      }
+      else
+      {
+         document.querySelectorAll('.accordion-item__image').forEach((item) =>
+            item.style = "height: 250px !important"
+         ) 
+      }
       this.parentNode.querySelector('.accrodion-item__content').style = "overflow:visible; height: 250px"; 
-      this.parentNode.querySelector('.accordion-item__image').style = "height: 400px "; 
+      this.parentNode.querySelector('.accordion-item__image').style = "height: 400px !important"; 
       this.querySelector('.trigger_line2').classList.add('trigger_active');
    }
 }
