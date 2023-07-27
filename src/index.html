@@ -7,7 +7,9 @@
     <div class="wrapper">
       @@include('html/header.html', {
         'Logo': '<img src="images/Логотип_Clay-01 1.svg" alt="Логотип Clay" id="logoimage1">',
-        'Цвет бургер-меню': 'style="background-color: #fff"'
+        'Цвет бургер-меню': 'style="background-color: #fff"',
+        'AboutUs': '<a href="#AboutUs" class="menu__link">О бренде</a>',
+        'Contacts': '<a href="#Contacts" class="menu__link">Контакты</a>'
       })   
       <main class="page">
         <section class="promo__section">
@@ -28,7 +30,7 @@
             </div>
           </div>
         </section>
-        <section class="about-us__section">
+        <section class="about-us__section" id="AboutUs">
           <div class="about-us__container _container">
             <div class="about-us__body">
               <h2>О бренде</h2>
