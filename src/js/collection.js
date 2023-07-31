@@ -28,7 +28,17 @@ burger.addEventListener('click', function(){
       document.body.style.overflow = "scroll";
    }
 });
-
+document.querySelectorAll('.burger-item').forEach((item) =>
+   {
+      item.addEventListener('click', () =>
+         {
+            document.body.style.overflow = "scroll";
+            burger.classList.toggle('burger_active');
+            burgerMenu.classList.toggle('_active');
+         }
+      )
+   }
+)
 const aLink = document.querySelectorAll('.accordion-item__link')
 
 for (let elem of aLink)

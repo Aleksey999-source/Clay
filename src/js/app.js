@@ -19,7 +19,7 @@ const header = document.querySelector('.header');
 const AboutUs = document.querySelector('.about-us__section');
 let BurgArr;
 window.addEventListener('scroll', function(){
-   if (header.getBoundingClientRect().top > AboutUs.getBoundingClientRect().top)
+   if (header.getBoundingClientRect().top > AboutUs.getBoundingClientRect().top - 30)
    {
       document.getElementById('logoimage1').src = "images/Логотип_Clay-01B.svg";
       BurgArr = document.querySelectorAll('.burger-line');
@@ -50,6 +50,17 @@ burger.addEventListener('click', function(){
       document.body.style.overflow = "scroll";
    }
 });
+document.querySelectorAll('.burger-item').forEach((item) =>
+   {
+      item.addEventListener('click', () =>
+         {
+            document.body.style.overflow = "scroll";
+            burger.classList.toggle('burger_active');
+            burgerMenu.classList.toggle('_active');
+         }
+      )
+   }
+)
 //----------------------------------------Анимация стрелки--------------------------
 const aLink = document.querySelectorAll('.accordion-item__link')
 

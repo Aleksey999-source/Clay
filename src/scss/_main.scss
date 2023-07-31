@@ -10,13 +10,14 @@ body.mouse{
    background-image: url(../images/main-background.png);
    background-repeat: no-repeat;
    background-size: cover;
-   @media (max-width:$md3){
-      background-position: 30% 60%;
-   }
    @media (min-width:$md1){
       background-position: 30% 60%;
    }
    .promo__body{
+      @media (max-width:$md3){
+
+         padding: 700px 0px 100px 0px;
+      }
       max-width: 734px;
       padding: 700px 0px 100px 0px;
       .promo__header{
