@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    @@include('html/head.html', 
+        {
+            'title': 'Каталог',
+        }
+    )
+<body>
+    @@include('html/header.html', {
+        'Logo': '<img src="images/Логотип_Clay-01B.svg" alt="Логотип Clay" id="logoimage1">',
+        'Цвет бургер-меню': 'style="background-color: #000"',
+        'AboutUs': '<a href="./index.html" class="menu__link">О бренде</a>',
+        'Shop': '<a href="./shop.html" class="menu__link">Магазин</a>',
+        'bAboutUs': '<a href="./index.html">О бренде</a>',
+        'bShop': '<a href="./shop.html">Магазин</a>',
+        'bContacts': '<a href="#Contacts">Контакты</a>',
+        'Contacts': '<a href="#Contacts" class="menu__link">Контакты</a>' 
+      })
+      <main class="page">
+        <div class="shop__catalogue _container">
+            <div class="shop-hyperlinks _container">
+                <a href="#">Магазин</a>
+                <i class="fa-solid fa-chevron-right"></i>
+                <a href="#">Коллекции</a>
+                <i class="fa-solid fa-chevron-right"></i>
+                <a href="#">Mono</a>
+            </div>
+            <div class="catalogue__body _container">
+                <div class="catalogue__image">
+                    <img src="images/tom-crew-U9gXnSGSB3w-unsplash1.png" alt="Фото продукции Clay">
+                    <div class="image__name">
+                        Mono
+                    </div>
+                </div>
+
+                <div class="catalogue__filters">
+
+                </div>
+
+                <div class="catalogue__stuff">
+
+                </div>
+            </div>
+        </div>
+      </main>
+
+      @@include('html/footer.html', {})
+
+      <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+      <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+      <script src="https://kit.fontawesome.com/5305d69ca5.js" crossorigin="anonymous"></script>
+      <script src="js/catalogue.js"></script>
+</body>
+</html>
