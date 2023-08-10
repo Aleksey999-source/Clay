@@ -45,3 +45,11 @@ document.querySelectorAll('.menu__link').forEach((item) => {
     item.style = "color: #000"
 })
 document.querySelector('.fa-solid').style = "color: #000";
+// =======================================================   ======================================= //
+const mediaQuery768px = window.matchMedia('(max-width: 768px)');
+
+if (mediaQuery768px.matches)
+{
+   document.querySelector('.catalogue__filters').style = "display: none;"
+   document.querySelector('.filter-media__item').style = "display: visible;"
+}

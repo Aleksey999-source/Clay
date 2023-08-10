@@ -690,7 +690,67 @@ footer{
 
       }
       .catalogue__filters{
+         display:flex;
+         justify-content: flex-start;
+         align-items: center;
+         .filter__item{
+            padding: 17px 20px 17px 20px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            width: 300px;  height: 50px;
+            border: solid 1px #363636;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all .3s ease;
+            .filter__name{ 
+               color: #363636;
+               font-family: Roboto;
+               font-size: 24px;
+               font-weight: 400;
+               margin: 0px 15px 0px 0px;
+            }
+            .filter__icon{
+               margin-top: 5px;
+               height: 25px; width: 25px;
+               display:flex;
+               justify-content: center;
+               align-items: center;
+               i{
+                  font-size: 22px;
+               }
 
+            }
+            &:not(:last-child){
+               margin: 0px 70px 0px 0px;
+               @media (max-width:$md2) {
+                  margin: 0px 20px 0px 0px; 
+               }
+            }
+         }
+         .filter-media__item{
+            display:flex;
+            justify-content: flex-start;
+            align-items: center;
+
+            .filter-media__name{
+               color: #363636;
+               font-family: Roboto;
+               font-size: 24px;
+               font-weight: 400;
+               margin: 0px 15px 0px 0px;
+            }
+            .filter-media__icon{
+               margin-top: 5px;
+               height: 25px; width: 25px;
+               display:flex;
+               justify-content: center;
+               align-items: center;
+               i{
+                  font-size: 22px;
+               }
+            }
+         }
       }
 
       .catalogue__stuff{
@@ -705,5 +765,11 @@ footer{
 body.mouse{
    .catalogue__image:hover:before{
       opacity: .2;
+   }
+   .filter__item:hover{
+      opacity: .6;
+   }
+   .catalogue__stuff{
+      padding: 80px 0px 80px 0px;
    }
 }
